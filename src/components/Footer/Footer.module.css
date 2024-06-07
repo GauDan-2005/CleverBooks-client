@@ -1,0 +1,157 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #151218;
+  /* width: 100%; */
+  padding: 2.5rem;
+  padding-top: 4rem;
+  align-self: stretch;
+  color: white;
+}
+
+.footer_card {
+  background-image: var(--gradient);
+  background-size: 300%;
+  animation: grad_animation 10s linear infinite alternate;
+
+  max-width: 1280px;
+  padding: 8rem;
+  border-radius: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_card_heading {
+  font-size: 3rem;
+  line-height: 4rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.footer_card_text {
+  font-size: 1rem;
+  /* line-height: 1.5rem; */
+  color: var(--white);
+  text-align: center;
+}
+
+.footer_btn_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 1.5rem;
+
+  background: var(--black);
+  color: var(--white);
+}
+
+.footer__link_div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_first {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 3fr 1fr 1fr 1.5fr;
+  grid-auto-columns: 1fr;
+  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer_logo_col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.footer_logo {
+  height: 3.5rem;
+}
+
+.footer_logo_text {
+  font-size: 1rem;
+  width: 90%;
+}
+
+.footer_text {
+  color: #c5c5c5;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.footer_col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.footer_title {
+}
+
+.footer_social_div {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer_social_icon {
+  height: 1.5rem;
+}
+
+.footer_second {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.footer_license_div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-right: auto;
+}
+
+.footer_license_link {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.arrow_top {
+}
+
+@keyframes grad_animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}

@@ -1,0 +1,72 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+  z-index: 1;
+  color: white;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient);
+  border-radius: inherit;
+  z-index: -2;
+  border-radius: 2rem;
+  transition: all 0.5s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0.15rem;
+  left: 0.15rem;
+  right: 0.15rem;
+  bottom: 0.15rem;
+  background-color: var(--bg-black);
+  border-radius: 2rem;
+  z-index: -2;
+  transition: all 0.5s ease;
+}
+
+.btn_title {
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1rem;
+
+  transition: all 0.5s ease;
+}
+
+.btn:hover::after {
+  top: 100%;
+  left: 100%;
+  right: 100%;
+  bottom: 100%;
+}
+
+.btn:hover .btn_title {
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.btn:hover {
+  outline: 0;
+}
+
+.white::after {
+  background-color: white;
+}

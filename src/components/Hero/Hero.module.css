@@ -1,0 +1,90 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+
+  background-image: url(../../assets/home-hero-bg.svg),
+    linear-gradient(to bottom, var(--black) 35%, var(--white) 73%);
+  background-position: 50% 100%, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: 100%, auto;
+  height: 115vh;
+
+  padding: 0 2.5rem;
+  padding-bottom: 2rem;
+  padding-right: 0;
+}
+
+.text_div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.heading {
+  width: 100%;
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.heading_highlight {
+  background-image: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  animation: grad_animation 10s infinite ease alternate;
+}
+
+.hero_para {
+  width: 100%;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.hero_btn_wrapper {
+  margin-top: 3.2rem;
+}
+
+.button_highlight_img {
+  position: absolute;
+  bottom: -2.4rem;
+  left: 16rem;
+  transition: all 0.3s ease;
+}
+
+.hero_btn_wrapper:hover ~ .button_highlight_img {
+  animation: img-animation 0.5s;
+  transform-style: preserve-3d;
+}
+
+.hero_img {
+  margin-bottom: -5%;
+  width: 40%;
+}
+
+@keyframes grad_animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+@keyframes img-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

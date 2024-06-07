@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: var(--lavender);
+}
+
+.main_img_div {
+  height: 3.5rem;
+}
+
+.main_img {
+  height: 100%;
+}
+
+.text_div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: medium;
+
+  align-self: stretch;
+}
+
+.subtext_div {
+  display: flex;
+}
+
+.text {
+  font-size: 1rem;
+  align-self: stretch;
+}
+
+.link {
+}
+
+.link_img {
+}
+
+.basic {
+}
+
+.gradient {
+}

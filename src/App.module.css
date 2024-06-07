@@ -1,0 +1,87 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8rem;
+
+  /* position: relative; */
+  overflow: hidden;
+}
+
+.section_heading {
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-align: center;
+  align-self: stretch;
+  line-height: 3rem;
+}
+
+.kq {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 4rem;
+}
+
+.kq_card_div {
+  display: flex;
+  gap: 1.25rem;
+  max-width: 1280px;
+}
+
+.company_wrapper {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+.company_wrapper:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100%;
+}
+
+.company_wrapper:hover .company {
+  animation-play-state: paused;
+}
+
+.company {
+  display: flex;
+  /* white-space: nowrap; */
+  gap: 2rem;
+  animation: company-scroll 20s infinite linear;
+}
+
+.company_img {
+  /* display: inline-block; */
+  height: 4rem;
+  margin: 0 1rem;
+}
+
+@keyframes company-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.customer_div {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.founder_div {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}

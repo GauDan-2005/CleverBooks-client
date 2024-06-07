@@ -1,0 +1,250 @@
+.customer_card {
+  grid-column-gap: 4rem;
+  grid-template-columns: 1fr 0.5fr;
+  grid-auto-columns: 1fr;
+  width: 100%;
+
+  display: grid;
+  justify-content: stretch;
+  align-items: center;
+  align-self: stretch;
+
+  max-width: 1280px;
+  animation: customer-animation 0.5s ease;
+}
+
+.left_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  align-self: stretch;
+  /* width: 60%; */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.info_text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.customer_detail_div {
+  display: flex;
+  gap: 1rem;
+  align-self: stretch;
+  align-items: center;
+}
+
+.customer_img {
+  border-radius: 4rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.customer_name_div {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.found_name {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+}
+
+.customer_position {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+.company_img {
+  height: 5.2rem;
+  margin-left: auto;
+}
+
+.customer_navigate {
+  display: flex;
+  gap: 1.5rem;
+  align-self: stretch;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.shift_img {
+  cursor: pointer;
+}
+
+.left {
+  transform: rotateZ(180deg);
+}
+
+.right {
+}
+
+.card_div {
+  display: flex;
+  gap: 1.25rem;
+  align-self: stretch;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 28%;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: var(--lavender);
+}
+
+.card_heading {
+  background-image: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+  text-align: center;
+  align-self: stretch;
+}
+
+.card_text {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  align-self: stretch;
+}
+
+.link_card {
+  width: 100%;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.3s; /* Add transition for smooth effect */
+}
+
+.link_card:hover {
+  filter: contrast(150%); /* Increase contrast on hover */
+}
+
+.link_card:hover .link_text,
+.link_card:hover .link_arrow {
+  filter: contrast(150%); /* Ensure the contents also have increased contrast */
+}
+
+.link_text {
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: filter 0.3s; /* Add transition for smooth effect */
+}
+
+.link_arrow {
+  align-self: center;
+  transition: filter 0.3s; /* Add transition for smooth effect */
+}
+
+.link_card {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 1;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+.link_card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient);
+  border-radius: inherit;
+  z-index: -2;
+  border-radius: 2rem;
+  transition: all 0.5s ease;
+}
+
+.link_card::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0.15rem;
+  left: 0.15rem;
+  right: 0.15rem;
+  bottom: 0.15rem;
+  background-color: var(--white);
+  border-radius: 2rem;
+  z-index: -2;
+  transition: all 0.5s ease;
+}
+
+.link_text {
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1rem;
+
+  transition: all 0.5s ease;
+}
+
+.main_img_wrapper {
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid #d8c3ff;
+
+  border-radius: 1.5rem;
+
+  grid-area: span 2 / span 1 / span 2 / span 1;
+}
+
+.main_img {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: clip;
+  overflow-clip-margin: content-box;
+}
+
+@keyframes customer-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
